@@ -5,12 +5,12 @@ public class Adopter {
     float age = 18;
     double availableMoney = 500;
     public void acquireFood() {
-        System.out.println("Buy tasty food");
+        System.out.println("Buy tasty food.");
     }
-    public void adopt() {
-        System.out.println("Adopted a friend");
+    public void adoptPet() {
+        System.out.println(name + " adopted a friend.");
     }
     public void tendPet() {
-        System.out.println("Provide for the pet");
+        System.out.println("Provide for the pet.");
     }
 }

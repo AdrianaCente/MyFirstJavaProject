@@ -2,11 +2,11 @@ package AnimalRescuer;
 
 public class Veterinarian {
     String name = "John Doe";
-    String specialization = "Behaviour";
+    String specialization = "behaviour";
     public void applyTreatment() {
-        System.out.println("Apply treatment to patients");
+        System.out.println("The doctor applies treatments to patients in the " + specialization + " department.");
     }
     public void writePrescriptions() {
-        System.out.println("Write prescription for treatment");
+        System.out.println("Doctor " + name + " writes prescription for the required treatment.");
     }
 }

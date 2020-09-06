@@ -8,8 +8,9 @@ public class Dog {
     byte stateOfMind = 6;
     String favouriteFood = "beef can";
     String favouriteActivity = "playing catch";
+    String personalDoctor = "Dolittle";
     public void run() {
-        System.out.println("Running like crazy.");
+        System.out.println(name + " is running like crazy.");
     }
     public void eat() {
         System.out.println(name + " loves eating " + favouriteFood + ".");
