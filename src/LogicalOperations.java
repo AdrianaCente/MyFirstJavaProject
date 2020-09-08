@@ -1,10 +1,28 @@
 public class LogicalOperations {
 
-    public int checkComparison(int number) {
-        if (number >=2 && number <= 8) {
-            return number;
+    public int checkBiggerNumber(int firstNumber, int secondNumber) {
+        if ( firstNumber > secondNumber) {
+            return firstNumber;
+        } else {
+            return secondNumber;
         }
-        return 0;
+    }
+
+    public String compareStrings(String stringText) {
+        if (stringText.equals("FastTrackIT")) {
+            return "Learning text comparison.";
+        } else {
+            return "Got to try some more.";
+        }
+    }
+
+    public String checkTextAndNumber(String input, int number){
+        if (input.equals("FastTrack") && number <= 3) {
+            return (input + number);
+        } else if (!input.equals("FastTrack") && number >= 4){
+            return (number + input);
+        }
+        return "";
     }
 
     public String weatherForecast(int number) {
@@ -22,6 +40,63 @@ public class LogicalOperations {
             return "The number is lower than 3";
         }
         return "No case of the above";
+    }
+
+    public void pressedKeyWithoutConcatenation(int number) {
+        switch (number) {
+            case 9: System.out.println("The number is: 9!"); break;
+            case 8: System.out.println("The number is: 8!"); break;
+            case 7: System.out.println("The number is: 7!"); break;
+            case 6: System.out.println("The number is: 6!"); break;
+            case 5: System.out.println("The number is: 5!"); break;
+            case 4: System.out.println("The number is: 4!"); break;
+            case 3: System.out.println("The number is: 3!"); break;
+            case 2: System.out.println("The number is: 2!"); break;
+            case 1: System.out.println("The number is: 1!"); break;
+            case 0: System.out.println("The number is: 0!"); break;
+        //  default: System.out.println("Not allowed");
+        }
+    }
+
+    public boolean isNumberEven(int number) {
+        // or just: return number % 2 == 0
+        if (number % 2 == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean isEligibleToVote(int age) {
+        if (age >= 18) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public float checkMaxNumber(float firstNumber, float secondNumber, float thirdNumber) {
+        float max;
+//        max = Math.max(Math.max(firstNumber, secondNumber), thirdNumber);
+        if (firstNumber >= secondNumber) {
+            if (firstNumber >= thirdNumber) {
+                max = firstNumber;
+            } else {
+                max = thirdNumber;
+            }
+        } else if (secondNumber >= thirdNumber) {
+            max = secondNumber;
+        } else {
+            max = thirdNumber;
+        }
+        return max;
+    }
+
+    public int checkComparison(int number) {
+        if (number >=2 && number <= 8) {
+            return number;
+        }
+        return 0;
     }
 
     public void pressedKey(int number) {

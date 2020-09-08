@@ -2,16 +2,6 @@ public class Lab2 {
 
     public static void main(String[] args) {
         printMyName();
-        printExpressionOne();
-        System.out.println("Expression two equals " + computeExpressionTwo(55, 9, 9));
-        System.out.println("Expression three equals " + computeExpressionThree(20, -3, 5, 8));
-        System.out.println("Expression four equals " + computeExpressionFour());
-        System.out.println("The sum of  two numbers is " + sumTwoNumbers(5, 6));
-        System.out.println("The sum for the four numbers is " + sumFourNumbers(5, 6, 2, 9));
-        System.out.println("The subtraction's result is " + subtract(10, 3.3f));
-        System.out.println("The multiplication's result is " + multiply(5.5f, 3.3f));
-        System.out.println("The division's result is " + divide(25.5, 3.3));
-        System.out.println("The reminder is " + modulo(25.5f, 3.3f));
         printPatternOne();
         System.out.println("The arithmetic mean is: " + computeArithmeticMean(20, 25.6, 25));
         printPatternTwo();
@@ -26,57 +16,12 @@ public class Lab2 {
     static void printMyName() {
         System.out.println("Hello \nAdriana!");
     }
-
-    static void printExpressionOne() {
-        System.out.println("-5 + 8 * 6 = " + (-5 + 8 * 6));
-    }
-
-    static float computeExpressionTwo(float a, float b, float c) {
-        float result = (a + b) % c;
-        return result;
-    }
-
-    static double computeExpressionThree(float a, float b, float c, float d) {
-        double result = a + b * c / d;
-        return result;
-    }
-
-    static float computeExpressionFour() {
-        float result = 5 + 2 * 15 / 3 - 8 % 3;
-        return result;
-    }
+    // Some of the methods have been moved to Calculator class
 
     //2. Add, subtract, multiply and divide
     //6. Division's reminder
-    static int sumTwoNumbers(int a, int b) {
-        int result = a + b;
-        return result;
-    }
+    // The methods have been moved to Calculator class
 
-    static int sumFourNumbers(int first, int second, int third, int forth) {
-        int result = first + second + third + forth;
-        return result;
-    }
-
-    static float subtract(float x, float y) {
-        float result = x - y;
-        return result;
-    }
-
-    static float multiply(float firstNum, float secondNum) {
-        float result = firstNum * secondNum;
-        return result;
-    }
-
-    static double divide(double firstNum, double secondNum) {
-        double result = firstNum * secondNum;
-        return result;
-    }
-
-    static float modulo(float firstNum, float secondNum) {
-        float result = firstNum % secondNum;
-        return result;
-    }
 
     //  3. Pattern 1
     static void printPatternOne() {
