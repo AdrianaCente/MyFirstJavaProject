@@ -4,35 +4,47 @@ public class AppMain {
     public static void main(String[] args) {
         // Dogs
         Dog dogOne = new Dog();
+        dogOne.setName("Tasha");
+        dogOne.setAge(2);
+        dogOne.setFavouriteActivity("playing catch");
+        dogOne.setFavouriteFood("beef can");
+        dogOne.setHealth(8);
+        dogOne.setHunger(9);
+        dogOne.setStateOfMind(9);
+        dogOne.setPersonalDoctor("Dolittle");
         System.out.println("--------------------------------");
-        System.out.println("Dog's details:\n" + "Name: " + dogOne.name + "\n" +
-                "Age: " + dogOne.age + "\nFavourite food: " + dogOne.favouriteFood + "\n" +
-                "Favourite activity: " + dogOne.favouriteActivity + "\nFavourite doctor: " + dogOne.personalDoctor);
+        System.out.println("Dog's details:\n" + "Name: " + dogOne.getName() + "\n" +
+                "Age: " + dogOne.getAge() + "\nFavourite food: " + dogOne.getFavouriteFood() + "\n" +
+                "Favourite activity: " + dogOne.getFavouriteActivity() + "\nFavourite doctor: " + dogOne.getPersonalDoctor());
         dogOne.eat();
         dogOne.activity();
         dogOne.bark();
 
         Dog dogTwo = new Dog();
-        dogTwo.name = "Bandit";
-        dogTwo.age = 12;
-        dogTwo.favouriteActivity = "stealing shoes";
-        dogTwo.favouriteFood = "french fries";
-        dogTwo.health = 9;
-        dogTwo.hunger = 10;
-        dogTwo.stateOfMind = 9;
+        dogTwo.setName("Bandit");
+        dogTwo.setAge(12);
+        dogTwo.setFavouriteActivity("stealing shoes");
+        dogTwo.setFavouriteFood("french fries");
+        dogTwo.setHealth(9);
+        dogTwo.setHunger(10);
+        dogTwo.setStateOfMind(9);
+        dogOne.setPersonalDoctor("Dolittle");
         System.out.println("--------------------------------");
-        System.out.println("Dog's details:\n" + "Name: " + dogTwo.name + "\n" +
-                "Age: " + dogTwo.age + "\nFavourite food: " + dogTwo.favouriteFood + "\n" +
-                "Favourite activity: " + dogTwo.favouriteActivity + "\nFavourite doctor: " + dogTwo.personalDoctor);
+        System.out.println("Dog's details:\n" + "Name: " + dogTwo.getName() + "\n" +
+                "Age: " + dogTwo.getAge() + "\nFavourite food: " + dogTwo.getFavouriteFood() + "\n" +
+                "Favourite activity: " + dogTwo.getFavouriteActivity() + "\nFavourite doctor: " + dogTwo.getPersonalDoctor());
         dogTwo.run();
         dogTwo.activity();
         dogTwo.sleep();
 
         // Adopter
         Adopter girlOne = new Adopter();
+        girlOne.setName("Ana Compton");
+        girlOne.setAge(15);
+        girlOne.setAvailableMoney(500);
         System.out.println("--------------------------------");
-        System.out.println("Adopter's details:\n" + "Name: " + girlOne.name + "\n" +
-                "Age: " + girlOne.age + "\nAvailable money: " + girlOne.availableMoney);
+        System.out.println("Adopter's details:\n" + "Name: " + girlOne.getName() + "\n" +
+                "Age: " + girlOne.getAge() + "\nAvailable money: " + girlOne.getAvailableMoney());
         girlOne.adoptPet();
         girlOne.acquireFood();
         girlOne.tendPet();
@@ -55,23 +67,29 @@ public class AppMain {
 
         // Food
         Food dogFoodOne = new Food();
+        dogFoodOne.setFoodName("Biscuits");
+        dogFoodOne.setFoodDescription("crunchy");
+        dogFoodOne.setPrice(5.5);
+        dogFoodOne.setQuantity(10);
+        dogFoodOne.setAvailability(true);
         System.out.println("--------------------------------");
-        System.out.println("Food's details:\n" + "Food name: " + dogFoodOne.foodName + "\n" +
-                "Food description: " + dogFoodOne.foodDescription + "\nPrice: " + dogFoodOne.price + "\n" +
-                "Food quantity: " + dogFoodOne.quantity);
-        dogFoodOne.quantity = 0;
-        dogFoodOne.isAvailable = false;
-        System.out.println("Is "+ dogFoodOne.foodName + " in stock: " + dogFoodOne.isAvailable);
+        System.out.println("Food's details:\n" + "Food name: " + dogFoodOne.getFoodName() + "\n" +
+                "Food description: " + dogFoodOne.getFoodDescription() + "\nPrice: " + dogFoodOne.getPrice() + "\n" +
+                "Food quantity: " + dogFoodOne.getQuantity());
+        dogFoodOne.setQuantity(0);
+        dogFoodOne.setAvailability(false);
+        System.out.println("Is "+ dogFoodOne.getFoodName() + " in stock: " + dogFoodOne.getAvailability());
 
         Food dogFoodTwo = new Food();
         System.out.println("--------------------------------");
-        dogFoodTwo.foodName = "Biscuits";
-        dogFoodTwo.foodDescription = "crunchy";
-        dogFoodTwo.price = 5.5;
-        dogFoodTwo.quantity = 10;
-        System.out.println("Food's details:\n" + "Food name: " + dogFoodTwo.foodName + "\n" +
-                "Food description: " + dogFoodTwo.foodDescription + "\nPrice: " + dogFoodTwo.price + "\n" +
-                "Food quantity: " + dogFoodTwo.quantity);
+        dogFoodTwo.setFoodName("Beef can");
+        dogFoodTwo.setFoodDescription("Some details about beef can content.");
+        dogFoodTwo.setPrice(20);
+        dogFoodTwo.setQuantity(100);
+        dogFoodOne.setAvailability(true);
+        System.out.println("Food's details:\n" + "Food name: " + dogFoodTwo.getFoodName() + "\n" +
+                "Food description: " + dogFoodTwo.getFoodDescription() + "\nPrice: " + dogFoodTwo.getPrice() + "\n" +
+                "Food quantity: " + dogFoodTwo.getQuantity());
 
         // Activity
         Activity activityOne = new Activity();
