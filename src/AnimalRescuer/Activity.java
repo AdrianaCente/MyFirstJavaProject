@@ -1,6 +1,22 @@
 package AnimalRescuer;
 
 public class Activity {
-    String activityName = "walk in the park";
-    String requiredMaterials = "leash, toy, water";
+    private String activityName;
+    private String requiredMaterials;
+
+    public String getActivityName() {
+        return this.activityName;
+    }
+
+    public void setActivityName(String activityName) {
+        this.activityName = activityName;
+    }
+
+    public String getRequiredMaterials() {
+        return this.requiredMaterials;
+    }
+
+    public void setRequiredMaterials(String requiredMaterials) {
+        this.requiredMaterials = requiredMaterials;
+    }
 }

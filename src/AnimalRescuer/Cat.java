@@ -1,11 +1,11 @@
 package AnimalRescuer;
 
-public class Dog {
+public class Cat {
     private String name;
     private float age;
-    private String breed;
+    private String color;
+    private String gender;
     private int health;
-    private int hunger;
     private int stateOfMind;
     private String favouriteFood;
     private String favouriteActivity;
@@ -27,12 +27,20 @@ public class Dog {
         this.age = age;
     }
 
-    public String getBreed() {
-        return this.breed;
+    public String getColor() {
+        return this.color;
     }
 
-    public void setBreed(String breed) {
-        this.breed = breed;
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getGender() {
+        return this.gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public int getHealth() {
@@ -43,13 +51,6 @@ public class Dog {
         this.health = health;
     }
 
-    public int getHunger() {
-        return this.hunger;
-    }
-
-    public void setHunger(int hunger) {
-        this.hunger = hunger;
-    }
 
     public int getStateOfMind() {
         return this.stateOfMind;
@@ -82,17 +83,8 @@ public class Dog {
     public void setPersonalDoctor(String personalDoctor) {
         this.personalDoctor = personalDoctor;
     }
-    public void run() {
-        System.out.println(name + " is running like crazy.");
-    }
     public void eat() {
         System.out.println(name + " loves eating " + favouriteFood + ".");
-    }
-    public void bark() {
-        System.out.println("Barks all day long.");
-    }
-    public void sleep() {
-        System.out.println("Sleeping on the couch.");
     }
     public void activity() {
         System.out.println(name + " enjoys " + favouriteActivity + ".");
