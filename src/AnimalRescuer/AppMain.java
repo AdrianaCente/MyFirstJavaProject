@@ -9,7 +9,7 @@ public class AppMain {
         dogOne.setFavouriteActivity("playing catch");
         dogOne.setFavouriteFood("beef can");
         dogOne.setHealth(8);
-        dogOne.setHunger(9);
+        dogOne.setHunger(6);
         dogOne.setBreed("beagle");
         dogOne.setStateOfMind(9);
         dogOne.setPersonalDoctor("Dolittle");
@@ -21,6 +21,7 @@ public class AppMain {
         dogOne.eat();
         dogOne.activity();
         dogOne.bark();
+        System.out.println(dogOne.isHungry());
         System.out.println(dogOne.getName() + " is a " + dogOne.getBreed() + ". She is " + dogOne.getAge() + " years old and has been " +
                 "brought to the shelter 2 weeks ago. \nShe enjoys " + dogOne.getFavouriteActivity() + " and her favourite food" +
                 " is " + dogOne.getFavouriteFood() + ". The doctor that takes care of her health is " + dogOne.getPersonalDoctor() + ".");
@@ -42,6 +43,7 @@ public class AppMain {
         dogTwo.run();
         dogTwo.activity();
         dogTwo.sleep();
+        System.out.println(dogTwo.isHungry());
         System.out.println(dogTwo.getName() + " is a " + dogTwo.getBreed() + ". He is " + dogTwo.getAge() + " years old and has been " +
                 "brought to the shelter 1 month ago. \nHe enjoys " + dogTwo.getFavouriteActivity() + " and his favourite food" +
                 " is " + dogTwo.getFavouriteFood() + ". The doctor that takes care of his health is " + dogTwo.getPersonalDoctor() + ".");
@@ -101,6 +103,8 @@ public class AppMain {
         System.out.println("Name: " + docOne.getName() + "\nSpecialization: " + docOne.getSpecialization());
         docOne.applyTreatment();
         docOne.writePrescriptions();
+        System.out.println("Doctor " + docOne.getName() + " is specialty trained to advance the " + docOne.getSpecialization() +" of animals through " +
+                "clinical practice, research, and science-based behavior education.");
 
         Veterinarian docTwo = new Veterinarian();
         System.out.println("--------------------------------");
@@ -109,6 +113,8 @@ public class AppMain {
         System.out.println("Name: " + docTwo.getName() + "\nSpecialization: " + docTwo.getSpecialization());
         docTwo.applyTreatment();
         docTwo.writePrescriptions();
+        System.out.println("Doctor " + docTwo.getName() + " is specialty trained to advance the " + docTwo.getSpecialization() + " of animals through " +
+                "cleaning, adjustment, filing, extraction, or repair of animals' teeth and all other aspects of oral health care in animals.");
 
         // Food
         Food dogFoodOne = new Food();

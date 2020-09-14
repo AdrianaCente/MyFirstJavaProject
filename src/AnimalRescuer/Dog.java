@@ -97,4 +97,8 @@ public class Dog {
     public void activity() {
         System.out.println(name + " enjoys " + favouriteActivity + ".");
     }
+    public String isHungry() {
+        String dogIsHungry = this.getHunger() > 8 ? this.getName() + " is hungry." : this.getName() + " is not so hungry...";
+        return dogIsHungry;
+    }
 }
