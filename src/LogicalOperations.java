@@ -68,6 +68,7 @@ public class LogicalOperations {
     }
 
     public boolean isEligibleToVote(int age) {
+        // or just return age >= 18
         if (age >= 18) {
             return true;
         } else {
@@ -92,6 +93,7 @@ public class LogicalOperations {
         return max;
     }
 
+    // Exercises from class
     public int checkComparison(int number) {
         if (number >=2 && number <= 8) {
             return number;
