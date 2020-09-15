@@ -1,8 +1,9 @@
 package School;
 
-public class Student {
+public class Student implements Alumni {
     private int id;
     private String name, surname;
+//    Student() {}
 
     public Student (int id, String name, String surname) {
         this.id = id;
@@ -43,5 +44,8 @@ public class Student {
 
     public void show () {
         System.out.println(String.format("Name: %s\nSurname: %s\nStudent ID: %d\n", name, surname, id));
+    }
+    public int getClassId() {
+        return classId;
     }
 }

@@ -37,5 +37,13 @@ public class SchoolMain {
         MathOperations operationOne = new MathOperations();
         System.out.println(operationOne.mathCalculus());
         System.out.println(operationOne.formatNumbers());
+
+        Student student3 = new Student(10, "Emma", "Down");
+        student3.show();
+        Student student4 = new StudentInfo();
+        student4.show();
+        Student student5 = new StudentEngl(77, "Hanna", "Bom", "Literature");
+        student5.show();
+        System.out.println(student5.getClassId());
     }
 }
