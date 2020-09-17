@@ -129,4 +129,51 @@ public class LogicalOperations {
             System.out.println("The person can vote.");
         } else System.out.println("The person is minor, cannot vote.");
     }
+
+    public void arrCheck() {
+        for (int i=1; i<=50; i++) {
+            if (i % 3 == 0) {
+                System.out.print("three ");
+                continue;
+            }
+            if (i % 5 == 0) {
+                System.out.print("five ");
+                continue;
+            }
+            System.out.print(i + " ");
+        }
+    }
+
+    public void printSumAndAverage(int startNumber, int endNumber) {
+        int sum = 0;
+        float count = 0;
+        for (int i = startNumber; i <= endNumber; i++) {
+            sum += i;
+            count ++;
+        }
+        System.out.println(sum);
+        System.out.println(sum/count);
+    }
+
+    public void printNumbersToValue(int number) {
+
+        for (int i = -100; i <= number; i++) {
+            System.out.println(i);
+        }
+    }
+
+    public void printValuesBetween(int firstValue, int secondValue) {
+        if (firstValue <= secondValue) {
+            while (firstValue <= secondValue) {
+                System.out.println(firstValue);
+                firstValue++;
+            }
+        } else {
+            while (secondValue <= firstValue) {
+                System.out.println(secondValue);
+                secondValue++;
+            }
+        }
+    }
+
 }
