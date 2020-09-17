@@ -130,17 +130,49 @@ public class LogicalOperations {
         } else System.out.println("The person is minor, cannot vote.");
     }
 
-    public void arrCheck() {
-        for (int i=1; i<=50; i++) {
-            if (i % 3 == 0) {
-                System.out.print("three ");
+    public void CozaLozaWoza() {
+        int count = 0;
+        for (int i = 1; i <= 110; i++) {
+            if (count % 11 == 0) {
+                System.out.println("");
+            }
+            if (i % 3 == 0 && i % 5 == 0 && i % 7 == 0) {
+                System.out.print("CozaLozaWoza ");
+                count++;
+                continue;
+            }
+            if (i % 5 == 0 && i % 7 == 0) {
+                System.out.print("WozaLoza ");
+                count++;
+                continue;
+            }
+            if (i % 3 == 0 && i % 7 == 0) {
+                System.out.print("CozaWoza ");
+                count++;
+                continue;
+            }
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.print("CozaLoza ");
+                count++;
+                continue;
+            }
+            if (i % 7 == 0) {
+                System.out.print("Woza ");
+                count++;
                 continue;
             }
             if (i % 5 == 0) {
-                System.out.print("five ");
+                System.out.print("Loza ");
+                count++;
+                continue;
+            }
+            if (i % 3 == 0) {
+                System.out.print("Coza ");
+                count++;
                 continue;
             }
             System.out.print(i + " ");
+            count++;
         }
     }
 
@@ -156,9 +188,14 @@ public class LogicalOperations {
     }
 
     public void printNumbersToValue(int number) {
-
-        for (int i = -100; i <= number; i++) {
-            System.out.println(i);
+        if (number >= -100) {
+            for (int i = -100; i <= number; i++) {
+                System.out.println(i);
+            }
+        } else {
+            for (int i = number; i <= -100; i++) {
+                System.out.println(i);
+            }
         }
     }
 
@@ -176,4 +213,18 @@ public class LogicalOperations {
         }
     }
 
+    public void printFibonacci() {
+        int firstNumber = 0;
+        int secondNumber = 1;
+        int nextNumber = 0;
+        int count = 0;
+        System.out.print("First 20 Fibonacci numbers: " + firstNumber + " " + secondNumber + " ");
+        while (count < 18) {
+            nextNumber = firstNumber + secondNumber;
+            System.out.print(nextNumber + " ");
+            firstNumber = secondNumber;
+            secondNumber = nextNumber;
+            count++;
+        }
+    }
 }

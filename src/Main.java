@@ -117,9 +117,5 @@ public class Main {
         //  11. Creati o metoda care sa primeasca 3 numere ca si parametrii si sa returneze cel mai mare numar.
         //  Apelati metoda in main() pentru a verifica daca functioneaza.
         System.out.println("The maximum value between three numbers is: " + logic.checkMaxNumber(180.1f, 80.4f, 30));
-
-        logic.arrCheck();
-        System.out.println();
-        logic.printSumAndAverage(1, 100);
     }
 }
