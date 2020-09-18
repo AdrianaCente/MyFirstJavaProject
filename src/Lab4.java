@@ -62,7 +62,58 @@ public class Lab4 {
 
         // While loops homework
 
+//        1. Creati o metoda in clasa LogicalOp, care sa primeste un numar ca si parametru.
+//        Metoda sa verifice numrul primit, si sa afiseze in consola o numaratoare pana la 100,
+//        pornind de la numarul primit ca si parametru. Atentie la crearea tipului metodei,
+//        deoarece metoda afiseaza, nu returneaza.
+        System.out.print("Print numbers until 100(with while): ");
+        operation.printNumbersToPositiveWithWhile(55);
+        System.out.println();
 
+//        2. Creati o metoda in clasa LogicalOp, care sa primeste un numar ca si parametru.
+//        Metoda sa verifice numrul primit, si sa afiseze in consola o numaratoare pana la -100,
+//        pornind de la numarul primit ca si parametru. Atentie la crearea tipului metodei,
+//        deoarece metoda afiseaza, nu returneaza.
+        System.out.print("Print numbers until -100(with while): ");
+        operation.printNumbersToNegativeWithWhile(-135);
+        System.out.println();
+
+//        3. Creati o metoda in clasa LogicalOp, care sa primeste doi parametrii de tip numar.
+//        Metoda sa afiseze o numaratoare intre cele doua numere primite, pornind de la primul parametru primit,
+//        pana la cel de-al doilea(ex: daca int x e primul parametru iar int y  este cel de-al doilea, numaratoarea
+//        sa se faca de la x, la y.
+        System.out.print("Print values between x and z(with while): ");
+        operation.printValuesBetween(10, 45);
+        System.out.println();
+
+//        4. Creati o metoda in clasa LogicalOp, care sa primeste doi parametrii de tip numar.
+//        Metoda trebuie sa verifice care dintre cele doua numere este mai mare, si sa execute o numaratoare
+//        crescatoare de la cel mai mic la cel mai mare.(ex: daca int x e primul parametru iar int y
+//        este cel de-al doilea, daca x  este mai mare decat y,  atunci numaratoarea sa fie de la y la x).
+        System.out.print("Print values between x and z after checking the greatest(with while): ");
+        operation.printCheckedValuesBetween(45, 10);
+        System.out.println();
+
+//        5. Creati o metoda in clasa LogicalOp care sa afiseze toate numerele pare de la 1 la 100.
+        System.out.print("Print even numbers between 1 and 100(with while): ");
+        operation.printEvenNumbersWithWhile();
+        System.out.println();
+
+//        6. Creati o metoda in clasa LogicalOp care sa afiseze toate numerele impare de la 1 la 100.
+        System.out.print("Print uneven numbers between 1 and 100(with while): ");
+        operation.printUnevenNumbersWithWhile();
+        System.out.println();
+
+//        7. Creati o metoda care sa adune toate numerele din intervalul 111 si 8899.
+//        Sa se afiseze suma totala, iar dupa aceea sa se calculeze si afiseze media numerelor din acel interval.
+//        Introduceti o variabila int count in metoda, pentru a numara toate numerele din interval.
+//        Apelati metoda in clasa Main, metoda main() pentru a verifica daca functioneaza.
+        operation.printSumAndAverage();
+
+//        8. Creati o metoda care sa primeasca doi parametrii de tip numar, si sa returneze media numerelor
+//        divizibile cu 7, din acel interval. Apelati metoda in clasa Main, metoda main() pentru a verifica
+//        daca functioneaza.
+        operation.printAverageDivisibilityWithSeven(1, 49);
 
 //        9. Creati o metoda care sa afiseze primele 20 de numere din sirul lui Fibonacci.
         operation.printFibonacci();
@@ -71,9 +122,5 @@ public class Lab4 {
 //        10. Creati o metoda numita CozaLozaWoza.
         System.out.println("CozaLozaWoza: ");
         operation.CozaLozaWoza();
-
-        // From class
-//        operation.printSumAndAverage(1, 100);
-//        operation.printValuesBetween(50, 34);
     }
 }

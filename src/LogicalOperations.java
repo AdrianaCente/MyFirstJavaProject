@@ -1,3 +1,5 @@
+import com.sun.source.tree.WhileLoopTree;
+
 public class LogicalOperations {
 
     public int checkBiggerNumber(int firstNumber, int secondNumber) {
@@ -219,12 +221,108 @@ public class LogicalOperations {
 
 //    While Homework
 
+    public void printNumbersToPositiveWithWhile(int number) {
+        if (number <= 100) {
+            while (number <= 100) {
+                System.out.print(number + " ");
+                number++;
+            }
+        } else {
+            while (number >= 100) {
+                System.out.print(number + " ");
+                number--;
+            }
+        }
+    }
+
+    public void printNumbersToNegativeWithWhile(int number) {
+        if (number <= -100) {
+            while (number <= -100) {
+                System.out.print(number + " ");
+                number++;
+            }
+        } else {
+            while (number >= -100) {
+                System.out.print(number + " ");
+                number--;
+            }
+        }
+    }
+
+    public void printValuesBetween(int firstValue, int secondValue) {
+        while (firstValue <= secondValue) {
+            System.out.print(firstValue + " ");
+            firstValue++;
+        }
+    }
+
+    public void printCheckedValuesBetween(int firstValue, int secondValue) {
+        if (firstValue <= secondValue) {
+            while (firstValue <= secondValue) {
+                System.out.print(firstValue + " ");
+                firstValue++;
+            }
+        } else {
+            while (secondValue <= firstValue) {
+                System.out.print(secondValue + " ");
+                secondValue++;
+            }
+        }
+    }
+
+    public void printEvenNumbersWithWhile() {
+        int i = 1;
+        while (i <= 100) {
+            if (i % 2 == 0) {
+                System.out.print(i + " ");
+            }
+            i++;
+        }
+    }
+
+    public void printUnevenNumbersWithWhile() {
+        int i = 1;
+        while (i <= 100) {
+            if (i % 2 != 0) {
+                System.out.print(i + " ");
+            }
+            i++;
+        }
+    }
+
+    public void printSumAndAverage() {
+        int sum = 0;
+        float count = 0;
+        int i = 111;
+        while (i <= 8899) {
+            sum += i;
+            i++;
+            count ++;
+        }
+        System.out.println("The sum of the numbers between 111 and 8899 is: " + sum);
+        System.out.println("The average of the numbers between 111 and 8899 is: " + sum/count);
+    }
+
+    public void printAverageDivisibilityWithSeven(int startValue, int endValue) {
+        int sum = 0;
+        float count = 0;
+        int i = startValue;
+        while (i <= endValue) {
+            if (i % 7 == 0) {
+                sum += i;
+                count++;
+            }
+            i++;
+        }
+        System.out.println("The average of the numbers divisible by seven is: " + sum/count);
+    }
+
     public void printFibonacci() {
         int firstNumber = 0;
         int secondNumber = 1;
         int nextNumber = 0;
         int count = 0;
-        System.out.print("First 20 Fibonacci numbers: " + firstNumber + " " + secondNumber + " ");
+        System.out.print("The first 20 Fibonacci numbers are: " + firstNumber + " " + secondNumber + " ");
         while (count < 18) {
             nextNumber = firstNumber + secondNumber;
             System.out.print(nextNumber + " ");
@@ -277,31 +375,6 @@ public class LogicalOperations {
             }
             System.out.print(i + " ");
             count++;
-        }
-    }
-
-    public void printSumAndAverage(int startNumber, int endNumber) {
-        int sum = 0;
-        float count = 0;
-        for (int i = startNumber; i <= endNumber; i++) {
-            sum += i;
-            count ++;
-        }
-        System.out.println(sum);
-        System.out.println(sum/count);
-    }
-
-    public void printValuesBetween(int firstValue, int secondValue) {
-        if (firstValue <= secondValue) {
-            while (firstValue <= secondValue) {
-                System.out.println(firstValue);
-                firstValue++;
-            }
-        } else {
-            while (secondValue <= firstValue) {
-                System.out.println(secondValue);
-                secondValue++;
-            }
         }
     }
 }
