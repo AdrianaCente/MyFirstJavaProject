@@ -10,13 +10,14 @@ public class AppMain {
         dogOne.setFavouriteFood("beef can");
         dogOne.setHealth(8);
         dogOne.setHunger(6);
+        dogOne.setGender("female");
         dogOne.setBreed("beagle");
         dogOne.setStateOfMind(9);
         dogOne.setPersonalDoctor("Dolittle");
         System.out.println("\n--------------------------------\nDog's details:" +
                 "\n--------------------------------\n");
         System.out.println("Name: " + dogOne.getName() + "\n" +
-                "Age: " + dogOne.getAge() + "\nFavourite food: " + dogOne.getFavouriteFood() + "\n" +
+                "Age: " + dogOne.getAge() + "\nGender: " + dogOne.getGender() + "\nFavourite food: " + dogOne.getFavouriteFood() + "\n" +
                 "Favourite activity: " + dogOne.getFavouriteActivity() + "\nFavourite doctor: " + dogOne.getPersonalDoctor());
         dogOne.eat();
         dogOne.activity();
@@ -33,12 +34,13 @@ public class AppMain {
         dogTwo.setFavouriteActivity("stealing shoes");
         dogTwo.setFavouriteFood("french fries");
         dogTwo.setHealth(9);
+        dogTwo.setGender("male");
         dogTwo.setHunger(10);
         dogTwo.setStateOfMind(9);
         dogTwo.setPersonalDoctor("Strange");
         System.out.println("--------------------------------");
         System.out.println("Name: " + dogTwo.getName() + "\n" +
-                "Age: " + dogTwo.getAge() + "\nFavourite food: " + dogTwo.getFavouriteFood() + "\n" +
+                "Age: " + dogTwo.getAge() + "\nGender: " + dogOne.getGender() + "\nFavourite food: " + dogTwo.getFavouriteFood() + "\n" +
                 "Favourite activity: " + dogTwo.getFavouriteActivity() + "\nFavourite doctor: " + dogTwo.getPersonalDoctor());
         dogTwo.run();
         dogTwo.activity();
@@ -71,7 +73,7 @@ public class AppMain {
                 " is " + catOne.getFavouriteFood() + ". The doctor that takes care of his health is " + catOne.getPersonalDoctor() + ".");
 
         // Adopter
-        Adopter girlOne = new Adopter();
+        GirlAdopter girlOne = new GirlAdopter();
         girlOne.setName("Ana Compton");
         girlOne.setAge(15);
         girlOne.setAvailableMoney(500);
@@ -83,7 +85,7 @@ public class AppMain {
         girlOne.acquireFood();
         girlOne.tendPet();
 
-        Adopter boyOne = new Adopter();
+        BoyAdopter boyOne = new BoyAdopter();
         boyOne.setName("John Doe");
         boyOne.setAge(30);
         boyOne.setAvailableMoney(730);
@@ -96,65 +98,71 @@ public class AppMain {
 
         // Veterinarian
         Veterinarian docOne = new Veterinarian();
-        System.out.println("\n--------------------------------\nDoctor's details:" +
+        System.out.println("\n--------------------------------\nMedical personnel's details:" +
                 "\n--------------------------------\n");
         docOne.setName("Dolittle");
         docOne.setSpecialization("behaviour");
+        docOne.setJob("Doctor");
         System.out.println("Name: " + docOne.getName() + "\nSpecialization: " + docOne.getSpecialization());
         docOne.applyTreatment();
         docOne.writePrescriptions();
-        System.out.println("Doctor " + docOne.getName() + " is specialty trained to advance the " + docOne.getSpecialization() +" of animals through " +
+        System.out.println(docOne.getJob() + " " + docOne.getName() + " is specialty trained to advance the " + docOne.getSpecialization() +" of animals through " +
                 "clinical practice, research, and science-based behavior education.");
 
         Veterinarian docTwo = new Veterinarian();
         System.out.println("--------------------------------");
         docTwo.setName("Strange");
         docTwo.setSpecialization("dentistry");
+        docTwo.setJob("Doctor");
         System.out.println("Name: " + docTwo.getName() + "\nSpecialization: " + docTwo.getSpecialization());
         docTwo.applyTreatment();
         docTwo.writePrescriptions();
-        System.out.println("Doctor " + docTwo.getName() + " is specialty trained to advance the " + docTwo.getSpecialization() + " of animals through " +
+        System.out.println(docTwo.getJob() + " " + docTwo.getName() + " is specialty trained to advance the " + docTwo.getSpecialization() + " of animals through " +
                 "cleaning, adjustment, filing, extraction, or repair of animals' teeth and all other aspects of oral health care in animals.");
 
-        // Food
-        Food dogFoodOne = new Food();
+        // Dog food and Cat food
+        DogFood dogFoodOne = new DogFood();
         dogFoodOne.setFoodName("Biscuits");
         dogFoodOne.setFoodDescription("crunchy");
         dogFoodOne.setPrice(5.5);
         dogFoodOne.setQuantity(10);
         dogFoodOne.setAvailability(true);
+        dogFoodOne.setRecommendedQuantity(120);
         System.out.println("\n--------------------------------\nFood's details:" +
                 "\n--------------------------------\n");
         System.out.println("Food name: " + dogFoodOne.getFoodName() + "\n" +
                 "Food description: " + dogFoodOne.getFoodDescription() + "\nPrice: " + dogFoodOne.getPrice() + "\n" +
-                "Food quantity: " + dogFoodOne.getQuantity());
+                "Food quantity: " + dogFoodOne.getQuantity() + "\nRecommended quantity for a regular dog: " + dogFoodOne.getRecommendedQuantity());
         dogFoodOne.setQuantity(0);
         dogFoodOne.setAvailability(false);
         System.out.println("Is "+ dogFoodOne.getFoodName() + " in stock: " + dogFoodOne.getAvailability());
 
-        Food dogFoodTwo = new Food();
+        CatFood catFoodTwo = new CatFood();
         System.out.println("--------------------------------");
-        dogFoodTwo.setFoodName("Beef can");
-        dogFoodTwo.setFoodDescription("Some details about beef can content.");
-        dogFoodTwo.setPrice(20);
-        dogFoodTwo.setQuantity(100);
-        dogFoodOne.setAvailability(true);
-        System.out.println("Food name: " + dogFoodTwo.getFoodName() + "\n" +
-                "Food description: " + dogFoodTwo.getFoodDescription() + "\nPrice: " + dogFoodTwo.getPrice() + "\n" +
-                "Food quantity: " + dogFoodTwo.getQuantity());
+        catFoodTwo.setFoodName("Beef can");
+        catFoodTwo.setFoodDescription("Some details about beef can content.");
+        catFoodTwo.setPrice(20);
+        catFoodTwo.setQuantity(100);
+        catFoodTwo.setAvailability(true);
+        catFoodTwo.setRecommendedForCats(true);
+        System.out.println("Food name: " + catFoodTwo.getFoodName() + "\n" +
+                "Food description: " + catFoodTwo.getFoodDescription() + "\nPrice: " + catFoodTwo.getPrice() + "\n" +
+                "Food quantity: " + catFoodTwo.getQuantity());
 
-        // Activity
-        Activity activityOne = new Activity();
+        // Dog's activity and cat's activity
+        CatActivity activityOne = new CatActivity();
         activityOne.setActivityName("walk in the park");
-        activityOne.setRequiredMaterials("leash, toy, water");
+        activityOne.setRequiredMaterials("toy, water");
         System.out.println("\n--------------------------------\n" +
                 "Activity conducted with a pet:\n--------------------------------\n");
         System.out.println("Activity name: " + activityOne.getActivityName() + "\nRequired materials: " + activityOne.getRequiredMaterials());
 
-        Activity activityTwo = new Activity();
+        DogActivity activityTwo = new DogActivity();
         System.out.println("--------------------------------");
         activityTwo.setActivityName("training");
         activityTwo.setRequiredMaterials("leash, food, water");
-        System.out.println("Activity name: " + activityTwo.getActivityName() + "\nRequired materials: " + activityTwo.getRequiredMaterials());
+        activityTwo.setLeashRequired(true);
+        System.out.println("Activity name: " + activityTwo.getActivityName() + "\nRequired materials: " + activityTwo.getRequiredMaterials() +
+                "\nLeash required: " + activityTwo.isLeashRequired());
     }
 }
