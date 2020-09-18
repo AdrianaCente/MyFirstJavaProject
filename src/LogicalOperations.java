@@ -130,10 +130,114 @@ public class LogicalOperations {
         } else System.out.println("The person is minor, cannot vote.");
     }
 
+    // For loops homework
+
+    public void printNumbersToPositive(int number) {
+        if (number <= 100) {
+            for (int i = number; i <= 100; i++) {
+                System.out.print(i + " ");
+            }
+        } else {
+            for (int i = number; i >= 100; i--) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+
+    public void printNumbersToNegative(int number) {
+        if (number >= -100) {
+            for (int i = number; i >= -100; i--) {
+                System.out.print(i + " ");
+            }
+        } else {
+            for (int i = number; i <= -100; i++) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+
+    public void printValuesBetweenWithFor(int firstValue, int secondValue) {
+        for (int i = firstValue; i <= secondValue; i++) {
+            System.out.print(i + " ");
+        }
+    }
+
+    public void printCheckedValuesBetweenWithFor(int firstValue, int secondValue) {
+        if (firstValue <= secondValue) {
+            for (int i = firstValue; i <= secondValue; i++) {
+                System.out.print(i + " ");
+            }
+        } else {
+            for (int i = secondValue; i <= firstValue; i++) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+
+    public void printEvenNumbers() {
+        for (int i = 1; i <= 100; i++) {
+            if (i % 2 == 0) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+
+    public void printUnevenNumbers() {
+        for (int i = 1; i <= 100; i++) {
+            if (i % 2 != 0) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+
+    public int printSum(int startNumber) {
+        int sum = 0;
+        for (int i = startNumber; i <= 100; i++) {
+            sum += i;
+        }
+        return sum;
+    }
+
+    public float printAverage(int startNumber) {
+        int sum = 0;
+        float count = 0;
+        for (int i = startNumber; i <= 100; i++) {
+            sum += i;
+            count ++;
+        }
+        return (sum/count);
+    }
+
+    public void printPattern() {
+        for (int i = 7; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+//    While Homework
+
+    public void printFibonacci() {
+        int firstNumber = 0;
+        int secondNumber = 1;
+        int nextNumber = 0;
+        int count = 0;
+        System.out.print("First 20 Fibonacci numbers: " + firstNumber + " " + secondNumber + " ");
+        while (count < 18) {
+            nextNumber = firstNumber + secondNumber;
+            System.out.print(nextNumber + " ");
+            firstNumber = secondNumber;
+            secondNumber = nextNumber;
+            count++;
+        }
+    }
+
     public void CozaLozaWoza() {
         int count = 0;
         for (int i = 1; i <= 110; i++) {
-            if (count % 11 == 0) {
+            if (count % 11 == 0 && count != 0) {
                 System.out.println("");
             }
             if (i % 3 == 0 && i % 5 == 0 && i % 7 == 0) {
@@ -187,18 +291,6 @@ public class LogicalOperations {
         System.out.println(sum/count);
     }
 
-    public void printNumbersToValue(int number) {
-        if (number >= -100) {
-            for (int i = -100; i <= number; i++) {
-                System.out.println(i);
-            }
-        } else {
-            for (int i = number; i <= -100; i++) {
-                System.out.println(i);
-            }
-        }
-    }
-
     public void printValuesBetween(int firstValue, int secondValue) {
         if (firstValue <= secondValue) {
             while (firstValue <= secondValue) {
@@ -210,21 +302,6 @@ public class LogicalOperations {
                 System.out.println(secondValue);
                 secondValue++;
             }
-        }
-    }
-
-    public void printFibonacci() {
-        int firstNumber = 0;
-        int secondNumber = 1;
-        int nextNumber = 0;
-        int count = 0;
-        System.out.print("First 20 Fibonacci numbers: " + firstNumber + " " + secondNumber + " ");
-        while (count < 18) {
-            nextNumber = firstNumber + secondNumber;
-            System.out.print(nextNumber + " ");
-            firstNumber = secondNumber;
-            secondNumber = nextNumber;
-            count++;
         }
     }
 }
