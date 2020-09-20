@@ -334,47 +334,56 @@ public class LogicalOperations {
 
     public void CozaLozaWoza() {
         int count = 0;
-        for (int i = 1; i <= 110; i++) {
+        int i = 1;
+        while (i <= 110) {
             if (count % 11 == 0 && count != 0) {
                 System.out.println("");
             }
             if (i % 3 == 0 && i % 5 == 0 && i % 7 == 0) {
                 System.out.print("CozaLozaWoza ");
                 count++;
+                i++;
                 continue;
             }
             if (i % 5 == 0 && i % 7 == 0) {
                 System.out.print("WozaLoza ");
                 count++;
+                i++;
                 continue;
             }
             if (i % 3 == 0 && i % 7 == 0) {
                 System.out.print("CozaWoza ");
                 count++;
+                i++;
                 continue;
             }
             if (i % 3 == 0 && i % 5 == 0) {
                 System.out.print("CozaLoza ");
                 count++;
+                i++;
                 continue;
             }
             if (i % 7 == 0) {
                 System.out.print("Woza ");
                 count++;
+                i++;
                 continue;
             }
             if (i % 5 == 0) {
                 System.out.print("Loza ");
                 count++;
+                i++;
                 continue;
             }
             if (i % 3 == 0) {
                 System.out.print("Coza ");
                 count++;
+                i++;
                 continue;
             }
             System.out.print(i + " ");
             count++;
+            i++;
         }
     }
 }
