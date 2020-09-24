@@ -444,7 +444,7 @@ public class LogicalOperations {
         for (int j = 0; j < receivedValue; j++) {
             for (int i = 0; i < receivedValue; i++) {
                 myArray[i] = "-";
-                System.out.print(myArray[i]);
+                System.out.print(myArray[i] + " ");
             }
             System.out.println();
         }

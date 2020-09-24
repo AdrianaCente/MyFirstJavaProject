@@ -3,7 +3,7 @@ package School;
 public class Student implements Alumni {
     private int id;
     private String name, surname;
-//    Student() {}
+    Student() {}
 
     public Student (int id, String name, String surname) {
         this.id = id;

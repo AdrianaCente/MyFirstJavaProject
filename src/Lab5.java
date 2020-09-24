@@ -81,7 +81,7 @@ public class Lab5 {
 //    !!!!! The exercise is solved at number 9.!!!!!
 
 //    2. Creati o metoda care insereze un element pe o pozitie specifica intr-un array.
-        int[] sentArrayNumbersTwo = new int[]{7, 26, 33, 1, 79, 5, 3, 1, 56};
+        int[] sentArrayNumbersTwo = new int[]{7, 26, 33, 1, 79, 5, 3, 1, 156};
         System.out.print("The array with the inserted value is: ");
         operation.printArray(operation.insertElementInArray(sentArrayNumbersTwo, 1, 100));
         System.out.println();
