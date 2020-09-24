@@ -1,5 +1,8 @@
 import com.sun.source.tree.WhileLoopTree;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class LogicalOperations {
 
     public int checkBiggerNumber(int firstNumber, int secondNumber) {
@@ -583,7 +586,7 @@ public class LogicalOperations {
         int count = 0;
         for (int i = 0; i < receivedArray.length; i++) {
             for (int j = i + 1; j < receivedArray.length; j++) {
-                if (receivedArray[i] == receivedArray[j]){
+                if (receivedArray[i] == receivedArray[j]) {
                     count++;
                     break;
                 }
@@ -596,7 +599,7 @@ public class LogicalOperations {
     }
 
     public void findCommonElementsInArrays(String[] firstArray, String[] secondArray) {
-        for (int i =0; i < firstArray.length; i++) {
+        for (int i = 0; i < firstArray.length; i++) {
             for (int j = 0; j < secondArray.length; j++) {
                 if (firstArray[i].equals(secondArray[j])) {
                     System.out.println(firstArray[i] + " ");
@@ -605,4 +608,61 @@ public class LogicalOperations {
         }
     }
 
+    public void displayShortList(List<Integer> myList) {
+        for (int i = 0; i < myList.size(); i++)
+            System.out.print(myList.get(i) + " ");
+    }
+
+    public List<Integer> addElementList(List<Integer> myList, int number) {
+        int n = myList.size();
+        myList.add(n, number);
+        return myList;
+    }
+
+    public void displayListElements(List<Integer> myList, int value) {
+        for (int i = myList.indexOf(value); i < myList.size(); i++) {
+            System.out.println(myList.get(i));
+        }
+    }
+
+    public void displayReversedList(List<Integer> myList) {
+        for (int i = myList.size() - 1; i >= 0; i--) {
+            System.out.println(myList.get(i));
+        }
+    }
+
+    public List<String> addElementAtPosition(List<String> myList, int valueIndex, String value) {
+        myList.add(valueIndex, value);
+        return myList;
+    }
+
+    public List<Integer> addElementOnFirstPosition(List<Integer> myList, int number) {
+        myList.add(0, number);
+        return myList;
+    }
+
+    public void displayDetailedList(List<Integer> myList) {
+        for (int i = 0; i < myList.size(); i++)
+            System.out.println("Pe pozitia " + i + " valoarea este " + myList.get(i) + ".");
+    }
+
+    public int findMaxNumberInList(List<Integer> myList) {
+        int max = myList.get(0);
+        for (int i = 0; i < myList.size(); i++) {
+            if (myList.get(i) > max) {
+                max = myList.get(i);
+            }
+        }
+        return max;
+    }
+
+    public List<Integer> evenListElements(List<Integer> receivedList) {
+        List<Integer> resultedList = new ArrayList<Integer>();
+        for (int i = 0; i < receivedList.size(); i++) {
+            if (receivedList.get(i) % 2 == 0) {
+                resultedList.add(receivedList.get(i));
+            }
+        }
+        return resultedList;
+    }
 }
