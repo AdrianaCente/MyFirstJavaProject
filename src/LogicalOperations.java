@@ -683,6 +683,12 @@ public class LogicalOperations {
         }
         receivedList.set(indexOne, valueTwo);
         receivedList.set(indexTwo, valueOne);
+
+//      if params valueOne and valueTwo were indexes:
+//        int temp = receivedList.get(valueOne);
+//        receivedList.set(valueOne, receivedList.get(valueTwo));
+//        receivedList.set(valueTwo, temp);
+
         return receivedList;
     }
 
