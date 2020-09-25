@@ -610,12 +610,12 @@ public class LogicalOperations {
 
     public void displayShortList(List<Integer> myList) {
         for (int i = 0; i < myList.size(); i++)
-            System.out.print(myList.get(i) + " ");
+            System.out.println(myList.get(i));
     }
 
     public List<Integer> addElementList(List<Integer> myList, int number) {
-        int n = myList.size();
-        myList.add(n, number);
+        int listSize = myList.size();
+        myList.add(listSize, number);
         return myList;
     }
 
@@ -656,7 +656,7 @@ public class LogicalOperations {
         return max;
     }
 
-    public List<Integer> evenListElements(List<Integer> receivedList) {
+    public List<Integer> getEvenListElements(List<Integer> receivedList) {
         List<Integer> resultedList = new ArrayList<Integer>();
         for (int i = 0; i < receivedList.size(); i++) {
             if (receivedList.get(i) % 2 == 0) {
@@ -664,5 +664,39 @@ public class LogicalOperations {
             }
         }
         return resultedList;
+    }
+
+    public List<Integer> switchElementsInList(List<Integer> receivedList, int valueOne, int valueTwo) {
+        int indexOne = 0;
+        int indexTwo = 0;
+        if ((!receivedList.contains(valueOne)) && (!receivedList.contains(valueTwo))) {
+            System.out.println("One/both of the value(s) provided are not in the list. The initial list will be returned.");
+            return receivedList;
+        }
+        for (int i = 0; i < receivedList.size(); i++) {
+            if (receivedList.get(i).equals(valueOne)) {
+                indexOne = receivedList.indexOf(receivedList.get(i));
+            }
+            if (receivedList.get(i).equals(valueTwo)) {
+                indexTwo = receivedList.indexOf(receivedList.get(i));
+            }
+        }
+        receivedList.set(indexOne, valueTwo);
+        receivedList.set(indexTwo, valueOne);
+        return receivedList;
+    }
+
+    public List<Integer> sortListAscending(List<Integer> receivedList) {
+        int temporaryVariable;
+        for (int i = 0; i < receivedList.size(); i++) {
+            for (int j = i + 1; j < receivedList.size(); j++) {
+                if (receivedList.get(i) > receivedList.get(j)) {
+                    temporaryVariable = receivedList.get(i);
+                    receivedList.set(i, receivedList.get(j));
+                    receivedList.set(j, temporaryVariable);
+                }
+            }
+        }
+        return receivedList;
     }
 }

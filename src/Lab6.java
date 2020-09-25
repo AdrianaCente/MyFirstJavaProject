@@ -26,9 +26,8 @@ public class Lab6 {
         shortList.add(12);
         shortList.add(90);
         shortList.add(78);
-        System.out.print("The list is: ");
+        System.out.println("The list is: ");
         operations.displayShortList(shortList);
-        System.out.println();
 
 //      2. Scrieti o metoda Java, care sa primeasca doi parametrii: un parametru sa fie o lista de numere,
 //      si celalalt un numar (real sau intreg). Metoda sa adauge numarul primit ca si parametru la final de lista.
@@ -110,6 +109,35 @@ public class Lab6 {
 
 //        Optional
 
+//      1. Scrieti o metoda Java care sa schimbe pozitia a doua elemente intr-o Lista.
+        List<Integer> sentListSwitch = new ArrayList<>();
+        sentListSwitch.add(22);
+        sentListSwitch.add(10);
+        sentListSwitch.add(33);
+        sentListSwitch.add(44);
+        sentListSwitch.add(90);
+        sentListSwitch.add(77);
+        System.out.println("The list with the switched elements is: " + operations.switchElementsInList(sentListSwitch, 10, 90));
+
 //      2. Scrieti o metoda Java care sa primeasca o Lista si sa returneze o alta lista, care sa contina doar numerele pare din lista primita.
+        List<Integer> sentList = new ArrayList<Integer>();
+        sentList.add(3);
+        sentList.add(6);
+        sentList.add(9);
+        sentList.add(8);
+        sentList.add(10);
+        System.out.println("The list with even elements: " + operations.getEvenListElements(sentList));
+
+//      3. Scrieti o metoda Java care sa primeasca parametru o Lista nesortata, si sa returneze Lista sortata crescator.
+//      Atentie, sortarea sa se faca programatic(adica logica sa fie scrisa de voi), si nu folosit librarie externa,
+//      precum Collection.sort().
+        List<Integer> sentUnsortedList = new ArrayList<Integer>();
+        sentUnsortedList.add(8);
+        sentUnsortedList.add(2);
+        sentUnsortedList.add(12);
+        sentUnsortedList.add(1);
+        sentUnsortedList.add(3);
+        sentUnsortedList.add(15);
+        System.out.println("The ascending sorted list is: " + operations.sortListAscending(sentUnsortedList));
     }
 }
