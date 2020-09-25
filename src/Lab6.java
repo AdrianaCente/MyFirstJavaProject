@@ -19,6 +19,8 @@ public class Lab6 {
         myList.remove(2);
 //        System.out.println(myList);
 
+        // Lists homework
+
 //      1. Scrieti o metoda Java, care sa primeasca parametru o Lista, si sa afiseze, pe rand, toate valorile din lista, fiecare pe rand nou.
         List<Integer> shortList = new ArrayList<>();
         shortList.add(5);
@@ -107,7 +109,7 @@ public class Lab6 {
         anotherList.add(9);
         System.out.println("The bigger number is: " + operations.findMaxNumberInList(anotherList));
 
-//        Optional
+//        Optional homework
 
 //      1. Scrieti o metoda Java care sa schimbe pozitia a doua elemente intr-o Lista.
         List<Integer> sentListSwitch = new ArrayList<>();
