@@ -608,6 +608,8 @@ public class LogicalOperations {
         }
     }
 
+//    Lists
+
     public void displayShortList(List<Integer> myList) {
         for (int i = 0; i < myList.size(); i++)
             System.out.println(myList.get(i));
