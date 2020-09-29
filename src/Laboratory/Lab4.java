@@ -1,3 +1,5 @@
+package Laboratory;
+
 public class Lab4 {
     public static void main(String[] args) {
         LogicalOperations operation = new LogicalOperations();

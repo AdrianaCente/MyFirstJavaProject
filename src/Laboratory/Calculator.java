@@ -1,3 +1,5 @@
+package Laboratory;
+
 public class Calculator {
     public int sumTwoNumbers(int a, int b) {
         int result = a + b;
