@@ -707,4 +707,12 @@ public class LogicalOperations {
         }
         return receivedList;
     }
+
+    public void wait(int value) {
+        try {
+            Thread.sleep(value * 1000);
+        } catch (InterruptedException e) {
+            System.out.println(e.getMessage());
+        }
+    }
 }

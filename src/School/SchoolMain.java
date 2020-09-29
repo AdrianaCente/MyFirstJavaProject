@@ -42,6 +42,8 @@ public class SchoolMain {
         student3.show();
         Student student4 = new StudentInfo();
         student4.show();
+        Student std = new StudentEngl();
+        std.show();
         Student student5 = new StudentEngl(77, "Hanna", "Bom", "Literature");
         student5.show();
         System.out.println(student5.getClassId());
