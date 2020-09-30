@@ -1,9 +1,10 @@
 package AnimalRescuer;
 
-public class MedicalPersonnel {
-    private String name;
+public abstract class MedicalPersonnel extends Human{
     private String specialization;
     private String job;
+
+    public abstract void applyTreatment();
 
     public String getJob() {
         return job;
@@ -13,23 +14,11 @@ public class MedicalPersonnel {
         this.job = job;
     }
 
-    public String getName() {
-        return this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getSpecialization() {
         return this.specialization;
     }
 
     public void setSpecialization(String specialization) {
         this.specialization = specialization;
-    }
-
-    public void applyTreatment() {
-        System.out.println("The medical personnel applies treatments to patients in the " + getSpecialization() + " department.");
     }
 }

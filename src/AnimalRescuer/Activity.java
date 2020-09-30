@@ -1,8 +1,10 @@
 package AnimalRescuer;
 
-public class Activity {
+public abstract class Activity {
     private String activityName;
     private String requiredMaterials;
+
+    public abstract void planActivityDetails();
 
     public String getActivityName() {
         return this.activityName;
@@ -18,8 +20,5 @@ public class Activity {
 
     public void setRequiredMaterials(String requiredMaterials) {
         this.requiredMaterials = requiredMaterials;
-    }
-    public void planActivityDetails() {
-        System.out.println("Activity: " + activityName + ", requires this materials: " + requiredMaterials + ".");
     }
 }

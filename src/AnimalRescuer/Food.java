@@ -1,11 +1,13 @@
 package AnimalRescuer;
 
-public class Food {
+public abstract class Food {
     private String foodName;
     private String foodDescription;
     private double price;
     private int quantity;
     private boolean isAvailable;
+
+    public abstract void recommendFoodQuantityAndType();
 
     public String getFoodName() {
         return this.foodName;
@@ -45,8 +47,5 @@ public class Food {
 
     public void setAvailability(boolean isAvailable) {
         this.isAvailable = isAvailable;
-    }
-    public void recommendFoodQuantityAndType() {
-        System.out.println("Animals shouldn't eat more than a recommended quantity of some food.");;
     }
 }

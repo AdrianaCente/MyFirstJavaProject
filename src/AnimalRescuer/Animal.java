@@ -1,6 +1,6 @@
 package AnimalRescuer;
 
-public class Animal {
+public abstract class Animal {
     private String name;
     private float age;
     private String gender;
@@ -10,6 +10,12 @@ public class Animal {
     private String favouriteFood;
     private String favouriteActivity;
     private String personalDoctor;
+
+    public abstract void sleep();
+
+    public abstract void animalSound();
+
+    public abstract void eat();
 
     public String getName() {
         return this.name;
@@ -83,14 +89,6 @@ public class Animal {
         this.personalDoctor = personalDoctor;
     }
 
-    public void eat() {
-        System.out.println("Animals eat different things. But " + name + " loves eating " + favouriteFood + ".");
-    }
-
-    public void sleep() {
-        System.out.println("Sleeping on the couch.");
-    }
-
     public String isHungry() {
         String dogIsHungry = hunger > 8 ? name + " is hungry." : name + " is not so hungry...";
         return dogIsHungry;
@@ -98,9 +96,5 @@ public class Animal {
 
     public void activity() {
         System.out.println("Animals enjoy a lot of activity. " + name + " enjoys " + favouriteActivity + ".");
-    }
-
-    public void animalSound() {
-        System.out.println("The animal makes a sound.");
     }
 }

@@ -145,7 +145,7 @@ public class AppMain {
         dogFoodOne.setRecommendedQuantity(120);
         System.out.println("\n--------------------------------\nFood's details:" +
                 "\n--------------------------------\n");
-        System.out.println("Food name: " + dogFoodOne.getFoodName() + "\n" +
+        System.out.println("Dog food \nFood name: " + dogFoodOne.getFoodName() + "\n" +
                 "Food description: " + dogFoodOne.getFoodDescription() + "\nPrice: " + dogFoodOne.getPrice() + "\n" +
                 "Food quantity: " + dogFoodOne.getQuantity() + "\nRecommended quantity for a regular dog: " + dogFoodOne.getRecommendedQuantity());
         dogFoodOne.setQuantity(0);
@@ -161,7 +161,7 @@ public class AppMain {
         catFoodTwo.setQuantity(100);
         catFoodTwo.setAvailability(true);
         catFoodTwo.setRecommendedForCats(true);
-        System.out.println("Food name: " + catFoodTwo.getFoodName() + "\n" +
+        System.out.println("Cat food \nFood name: " + catFoodTwo.getFoodName() + "\n" +
                 "Food description: " + catFoodTwo.getFoodDescription() + "\nPrice: " + catFoodTwo.getPrice() + "\n" +
                 "Food quantity: " + catFoodTwo.getQuantity());
         catFoodTwo.recommendFoodQuantityAndType();
@@ -172,7 +172,7 @@ public class AppMain {
         activityOne.setRequiredMaterials("toy, water");
         System.out.println("\n--------------------------------\n" +
                 "Activity conducted with a pet:\n--------------------------------\n");
-        System.out.println("Activity name: " + activityOne.getActivityName() + "\nRequired materials: " + activityOne.getRequiredMaterials());
+        System.out.println("Cat's activity \nActivity name: " + activityOne.getActivityName() + "\nRequired materials: " + activityOne.getRequiredMaterials());
         activityOne.planActivityDetails();
 
         DogActivity activityTwo = new DogActivity();
@@ -180,7 +180,7 @@ public class AppMain {
         activityTwo.setActivityName("training");
         activityTwo.setRequiredMaterials("food, water");
         activityTwo.setLeashRequired(true);
-        System.out.println("Activity name: " + activityTwo.getActivityName() + "\nRequired materials: " + activityTwo.getRequiredMaterials() +
+        System.out.println("Dog's activity \nActivity name: " + activityTwo.getActivityName() + "\nRequired materials: " + activityTwo.getRequiredMaterials() +
                 "\nLeash required: " + activityTwo.isLeashRequired());
         activityTwo.planActivityDetails();
     }
