@@ -7,6 +7,7 @@ import Laboratory.ReadFromKeyboard;
 import java.lang.reflect.Method;
 
 
+import java.text.BreakIterator;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -23,17 +24,17 @@ public class Main {
 
         List<Menu> menu = new ArrayList<Menu>();
         menu.add(new Menu(0, "Exit", ""));
-        menu.add(new Menu(1, "Add two numbers", "calculus.sumTwoNumbers(5, 6)"));
-        menu.add(new Menu(2, "Add four numbers", "calculus.sumFourNumbers(5, 6, 2, 9)"));
-        menu.add(new Menu(3, "Subtract", "calculus.subtract(10, 3.3f)"));
-        menu.add(new Menu(4, "Multiply two numbers", "calculus.multiply(5.5f, 3.3f)"));
-        menu.add(new Menu(5, "Divide two numbers", "calculus.divide(25.5, 3.3)"));
+        menu.add(new Menu(1, "Add two numbers", "calculus.sumTwoNumbers()"));
+        menu.add(new Menu(2, "Add four numbers", "calculus.sumFourNumbers()"));
+        menu.add(new Menu(3, "Subtract", "calculus.subtract()"));
+        menu.add(new Menu(4, "Multiply two numbers", "calculus.multiply()"));
+        menu.add(new Menu(5, "Divide two numbers", "calculus.divide()"));
 
         if (menuList.loginInApplication(name, pass) == true && countLogin <= 3) {
             System.out.println();
             menuList.displayMenu(menu);
 
-            int option = readKeyboard.getOptionMenu(menu);
+            int option = menuList.getOptionMenu(menu);
             if (option == 0)
                 System.exit(option);
 
@@ -44,29 +45,32 @@ public class Main {
 //                }
 //            }
                 switch (option) {
+                    case 0:
+                        System.out.println("Program ended.");
+                        break;
                     case 1:
-                        System.out.println("The sum of two numbers is " + calculus.sumTwoNumbers(5, 6));
+                        System.out.println("The sum of two numbers is " + calculus.sumTwoNumbers());
                         System.out.println();
                         break;
                     case 2:
-                        System.out.println("The sum for the four numbers is " + calculus.sumFourNumbers(5, 6, 2, 9));
+                        System.out.println("The sum for the four numbers is " + calculus.sumFourNumbers());
                         System.out.println();
                         break;
                     case 3:
-                        System.out.println("The subtraction's result is " + calculus.subtract(10, 3.3f));
+                        System.out.println("The subtraction's result is " + calculus.subtract());
                         System.out.println();
                         break;
                     case 4:
-                        System.out.println("The multiplication's result is " + calculus.multiply(5.5f, 3.3f));
+                        System.out.println("The multiplication's result is " + calculus.multiply());
                         System.out.println();
                         break;
                     case 5:
-                        System.out.println("The division's result is " + calculus.divide(25.5, 3.3));
+                        System.out.println("The division's result is " + calculus.divide());
                         System.out.println();
                         break;
                 }
                 menuList.displayMenu(menu);
-                option = readKeyboard.getOptionMenu(menu);
+                option = menuList.getOptionMenu(menu);
             }
         }
         System.out.println();

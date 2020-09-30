@@ -56,12 +56,12 @@ public class Main {
         // 1. Calculator class
         Calculator calculatorOne = new Calculator();
         System.out.println("____________________ Homework if / else ____________________");
-        System.out.println("The sum of  two numbers is " + calculatorOne.sumTwoNumbers(5, 6));
-        System.out.println("The sum for the four numbers is " + calculatorOne.sumFourNumbers(5, 6, 2, 9));
-        System.out.println("The subtraction's result is " + calculatorOne.subtract(10, 3.3f));
-        System.out.println("The multiplication's result is " + calculatorOne.multiply(5.5f, 3.3f));
-        System.out.println("The division's result is " + calculatorOne.divide(25.5, 3.3));
-        System.out.println("The reminder is " + calculatorOne.modulo(25.5f, 3.3f));
+        System.out.println("The sum of  two numbers is " + calculatorOne.sumTwoNumbers());
+        System.out.println("The sum for the four numbers is " + calculatorOne.sumFourNumbers());
+        System.out.println("The subtraction's result is " + calculatorOne.subtract());
+        System.out.println("The multiplication's result is " + calculatorOne.multiply());
+        System.out.println("The division's result is " + calculatorOne.divide());
+        System.out.println("The reminder is " + calculatorOne.modulo());
         calculatorOne.printExpressionOne();
         System.out.println("Expression two equals " + calculatorOne.computeExpressionTwo(55, 9, 9));
         System.out.println("Expression three equals " + calculatorOne.computeExpressionThree(20, -3, 5, 8));
@@ -73,12 +73,12 @@ public class Main {
         //  3. Creati o metoda de tip int, care sa se numeasca checkBiggerNumber(), si sa primeasca doua int-uri ca si parametrii.
         //  Folosind if - else, verificati in interiorul metode care numar este mai mare, dintre cele doua valori
         //  care va vin ca si parametrii, si returnati numarul mai mare.
-        System.out.println("The bigger number is: " + logic.checkBiggerNumber(12, 4));
+        System.out.println("The bigger number is: " + logic.checkBiggerNumber());
 
         //  4. Creati o metoda de tip String, care sa primeasca un parametru de tip String. Verificati daca textul ce
         //  vine ca si parametru este egal cu “FastTrackIT”. Daca da, atunci metoda sa returneze “Learning text comparison”.
         //  Daca nu, atunci metoda sa returneze “Got to try some more”.
-        System.out.println(logic.compareStrings("FastTrack"));
+        System.out.println(logic.compareStrings());
 
         //  5. Creati o metoda de tip String, care sa primeasca un parametru de tip String, si un parametru de tip int.
         //  Daca textul primit ca si parametru este egal cu “FastTrackIT”, si numarul primit ca si parametru este mai mic
@@ -91,33 +91,33 @@ public class Main {
         //  mare de 8, SAU egal cu 6, atunci sa se returneze “The amount of snow this winter was(cm): “ si numarul.
         //  Daca nu, sa printeze “The forecast snow is(cm):” si numarul. Apelati metoda in main() pentru a verifica
         //  daca functioneaza.
-        System.out.println(logic.weatherForecast(3));
+        System.out.println(logic.weatherForecast());
 
         //  7. Creati o metoda de tip String, care sa primeasca un parametru de tip numar. Daca numarul e mai mare decat 3,
         //  SI nu egal cu 4, returnati “The number is greater than 3 and not equal to 4”. Daca numarul este egal cu 4,
         //  returnati “The number is equal to 4”, iar daca numarul este mai mic de 3 returnati “The number is lower than 3”.
         //  Apelati metoda in main() pentru a verifica daca functioneaza.
-        System.out.println(logic.checkNumber(1));
+        System.out.println(logic.checkNumber());
 
         //  8. Creati o metoda care primeste un numar ca si parametru si sa afiseze ce numar a primit. Folosind constructia
         //  Switch-Case, verificati ce numar s-a primit si afisati textul "The number is:  x !" unde x trebuie sa reprezinte
         //  numarul apasat. Pentru exemplul de fata sa nu se foloseasca concatenarea stringului "The number is:" cu numarul
         //  de la parametru, ci sa se scrie intreg textul cu tot cu numar pentru fiecare caz din Switch-Case.
         //  Apelati metoda in main() pentru a verifica daca functioneaza.
-        logic.pressedKeyWithoutConcatenation(5);
+        logic.pressedKeyWithoutConcatenation();
 
         //  9. Creati o metoda care sa se numeasca isNumberEven. Metoda trebuie sa primeasca ca parametru un numar,
         //  si sa returneze adevarat sau fals. Daca numarul e par sa returneze true iar daca e impar sa returnese false.
         //  Apelati metoda in main() pentru a verifica daca functioneaza.
-        System.out.println("Is an even number? " + logic.isNumberEven(4));
+        System.out.println("Is an even number? " + logic.isNumberEven());
 
         //  10. Creati o metoda care sa se numeasca isEligibleToVote. Metoda sa primeasca ca si parametru un numar,
         //  care sa reprezinte varsta, iar metoda sa iti zica daca daca persoana are drept de vot. Daca varsta e peste 18,
         //  sa se returneze true iar daca nu, sa returneze false. Apelati metoda in main() pentru a verifica daca functioneaza.
-        System.out.println("Is the person eligible to vote? " + logic.isEligibleToVote(7));
+        System.out.println("Is the person eligible to vote? " + logic.isEligibleToVote());
 
         //  11. Creati o metoda care sa primeasca 3 numere ca si parametrii si sa returneze cel mai mare numar.
         //  Apelati metoda in main() pentru a verifica daca functioneaza.
-        System.out.println("The maximum value between three numbers is: " + logic.checkMaxNumber(180.1f, 80.4f, 30));
+        System.out.println("The maximum value between three numbers is: " + logic.checkMaxNumber());
     }
 }

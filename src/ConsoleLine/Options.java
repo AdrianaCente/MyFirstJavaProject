@@ -24,4 +24,28 @@ public class Options {
         }
         return false;
     }
+
+    public int getOptionMenu(List<Menu> menu) {
+        int returnedValue = 0;
+        boolean repeat = true;
+        while (repeat) {
+            try {
+                Scanner scanValue = new Scanner(System.in);
+                System.out.print("Please enter an option: ");
+                returnedValue = scanValue.nextInt();
+                if (returnedValue >= menu.size()) {
+                    System.out.printf("Index is out of range. Please enter a number lower than %d.", menu.size());
+                    continue;
+                }
+                repeat = false;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid type entered. Please enter a number.");
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.printf("Index is out of range. Please enter a number between 1 and %d", menu.size());
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        return returnedValue;
+    }
 }

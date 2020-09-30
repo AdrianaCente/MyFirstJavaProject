@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LogicalOperations {
+    public ReadFromKeyboard readKeyboard = new ReadFromKeyboard();
 
-    public int checkBiggerNumber(int firstNumber, int secondNumber) {
+    public int checkBiggerNumber() {
+        int firstNumber = readKeyboard.getInt();
+        int secondNumber = readKeyboard.getInt();
         if (firstNumber > secondNumber) {
             return firstNumber;
         } else {
@@ -13,7 +16,8 @@ public class LogicalOperations {
         }
     }
 
-    public String compareStrings(String stringText) {
+    public String compareStrings() {
+        String stringText= readKeyboard.getString();
         if (stringText.equals("FastTrackIT")) {
             return "Learning text comparison.";
         } else {
@@ -30,14 +34,16 @@ public class LogicalOperations {
         return "";
     }
 
-    public String weatherForecast(int number) {
+    public String weatherForecast() {
+        int number = readKeyboard.getInt();
         if (number > 8 || number == 6) {
             return "The amount of snow this winter was(cm): " + number;
         }
         return "The forecast snow is(cm): " + number;
     }
 
-    public String checkNumber(int number) {
+    public String checkNumber() {
+        int number = readKeyboard.getInt();
         if (number > 3 && number != 4) {
             return "The number is greater than 3 and not equal to 4";
         } else if (number == 4) {
@@ -48,7 +54,8 @@ public class LogicalOperations {
         return "No case of the above";
     }
 
-    public void pressedKeyWithoutConcatenation(int number) {
+    public void pressedKeyWithoutConcatenation() {
+        int number = readKeyboard.getInt();
         switch (number) {
             case 9:
                 System.out.println("The number is: 9!");
@@ -80,12 +87,13 @@ public class LogicalOperations {
             case 0:
                 System.out.println("The number is: 0!");
                 break;
-            //  default: System.out.println("Not allowed");
+            default: System.out.println("Not allowed");
         }
     }
 
-    public boolean isNumberEven(int number) {
+    public boolean isNumberEven() {
         // or just: return number % 2 == 0
+        int number = readKeyboard.getInt();
         if (number % 2 == 0) {
             return true;
         } else {
@@ -93,8 +101,9 @@ public class LogicalOperations {
         }
     }
 
-    public boolean isEligibleToVote(int age) {
+    public boolean isEligibleToVote() {
         // or just return age >= 18
+        int age = readKeyboard.getInt();
         if (age >= 18) {
             return true;
         } else {
@@ -102,8 +111,11 @@ public class LogicalOperations {
         }
     }
 
-    public float checkMaxNumber(float firstNumber, float secondNumber, float thirdNumber) {
+    public float checkMaxNumber() {
         float max;
+        float firstNumber = readKeyboard.getInt();
+        float secondNumber = readKeyboard.getInt();
+        float thirdNumber = readKeyboard.getInt();
 //        max = Math.max(Math.max(firstNumber, secondNumber), thirdNumber);
         if (firstNumber >= secondNumber) {
             if (firstNumber >= thirdNumber) {

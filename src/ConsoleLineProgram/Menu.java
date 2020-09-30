@@ -1,4 +1,4 @@
-package ConsoleLine;
+package ConsoleLineProgram;
 
 public class Menu {
     public int id = 0;
@@ -8,6 +8,10 @@ public class Menu {
         this.id = id;
         this.title = title;
         this.methodName = methodName;
+    }
+    public Menu(int id, String title) {
+        this.id = id;
+        this.title = title;
     }
     public void showMenu() {
         System.out.println(id + ". " + title);

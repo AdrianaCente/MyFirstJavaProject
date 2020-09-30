@@ -1,6 +1,6 @@
 package Laboratory;
 
-import ConsoleLine.Menu;
+import ConsoleLineProgram.Menu;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -54,6 +54,22 @@ public class ReadFromKeyboard {
             }
         }
         return number;
+    }
+
+    public String getString() {
+        String value = "";
+        boolean repeat = true;
+        while (repeat) {
+            try {
+                Scanner scan = new Scanner(System.in);
+                System.out.print("Please enter a string: ");
+                value = scan.nextLine();
+                repeat = false;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid type entered.");
+            }
+        }
+        return value;
     }
 
     public long getLong() {
@@ -127,7 +143,7 @@ public class ReadFromKeyboard {
                 System.out.print("Please enter an option: ");
                 returnedValue = scanValue.nextInt();
                 if (returnedValue >= menu.size()) {
-                    System.out.println("Index is out of range. Please enter a lower number");
+                    System.out.printf("Index is out of range. Please enter a number lower than %d.", menu.size());
                     continue;
                 }
                 repeat = false;
