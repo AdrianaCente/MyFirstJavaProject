@@ -28,4 +28,8 @@ public class MedicalPersonnel {
     public void setSpecialization(String specialization) {
         this.specialization = specialization;
     }
+
+    public void applyTreatment() {
+        System.out.println("The medical personnel applies treatments to patients in the " + getSpecialization() + " department.");
+    }
 }

@@ -18,4 +18,20 @@ public class Dog extends Animal {
     public void bark() {
         System.out.println("Barks all day long.");
     }
+
+    public void animalSound() {
+        System.out.println("The dog makes woof, woof!");
+    }
+
+    public void eat() {
+        System.out.println("Dogs like to eat fried chicken. But " + getName() + " loves eating " + getFavouriteFood() + ".");
+    }
+
+    public void activity() {
+        System.out.println("Dogs enjoy going outside. " + getName()+ " enjoys " + getFavouriteActivity() + ".");
+    }
+
+    public void sleep() {
+        System.out.println("Dogs sleep a lot on the couch.");
+    }
 }

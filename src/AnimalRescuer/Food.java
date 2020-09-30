@@ -46,4 +46,7 @@ public class Food {
     public void setAvailability(boolean isAvailable) {
         this.isAvailable = isAvailable;
     }
+    public void recommendFoodQuantityAndType() {
+        System.out.println("Animals shouldn't eat more than a recommended quantity of some food.");;
+    }
 }

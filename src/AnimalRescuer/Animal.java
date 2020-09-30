@@ -84,7 +84,7 @@ public class Animal {
     }
 
     public void eat() {
-        System.out.println(name + " loves eating " + favouriteFood + ".");
+        System.out.println("Animals eat different things. But " + name + " loves eating " + favouriteFood + ".");
     }
 
     public void sleep() {
@@ -97,6 +97,10 @@ public class Animal {
     }
 
     public void activity() {
-        System.out.println(name + " enjoys " + favouriteActivity + ".");
+        System.out.println("Animals enjoy a lot of activity. " + name + " enjoys " + favouriteActivity + ".");
+    }
+
+    public void animalSound() {
+        System.out.println("The animal makes a sound.");
     }
 }

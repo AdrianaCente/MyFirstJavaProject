@@ -10,4 +10,8 @@ public class DogActivity extends Activity {
     public void setLeashRequired(boolean leashRequired) {
         isLeashRequired = leashRequired;
     }
+
+    public void planActivityDetails() {
+        System.out.println("Activity: " + getActivityName() + ", requires this materials: " + getRequiredMaterials() + ". Leash required: " + isLeashRequired() + ".");
+    }
 }

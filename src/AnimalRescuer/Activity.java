@@ -19,4 +19,7 @@ public class Activity {
     public void setRequiredMaterials(String requiredMaterials) {
         this.requiredMaterials = requiredMaterials;
     }
+    public void planActivityDetails() {
+        System.out.println("Activity: " + activityName + ", requires this materials: " + requiredMaterials + ".");
+    }
 }
