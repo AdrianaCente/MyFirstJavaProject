@@ -32,98 +32,123 @@ public class Program {
         System.out.println();
         System.out.println("Your options are:");
         displayMenu(mainMenu);
-        int mainOption = readKeyboard.getOptionMenu(menuCalculator);
+        int mainOption = readKeyboard.getOptionMenu(mainMenu);
         switch (mainOption) {
             case 0:
                 System.out.println("Program ended.");
                 return false;
             case 1:
-                displayMenu(menuCalculator);
-                int option = readKeyboard.getOptionMenu(menuCalculator);
-                switch (option) {
-                    case 0:
-                        System.out.println("Program ended.");
-                        return false;
-                    case 1:
-                        System.out.println("The sum of the two numbers is " + calculus.sumTwoNumbers() + ".");
-                        System.out.println();
-                        break;
-                    case 2:
-                        System.out.println("The sum for the four numbers is " + calculus.sumFourNumbers() + ".");
-                        System.out.println();
-                        break;
-                    case 3:
-                        System.out.println("The subtraction's result is " + calculus.subtract() + ".");
-                        System.out.println();
-                        break;
-                    case 4:
-                        System.out.println("The multiplication's result is " + calculus.multiply() + ".");
-                        System.out.println();
-                        break;
-                    case 5:
-                        System.out.println("The division's result is " + calculus.divide() + ".");
-                        System.out.println();
-                        break;
-                    case 6:
-                        System.out.println("The reminder is " + calculus.modulo() + ".");
-                        System.out.println();
-                        break;
-                    default:
-                        System.out.println("Your options are:");
-                        displayMenu(menuCalculator);
-                }
+                boolean isCalculator;
+                do {
+                    isCalculator = executeCalculatorSubmenu(menuCalculator);
+                } while (isCalculator);
                 break;
             case 2:
-                displayMenu(menuLogical);
-                int optionLogic = readKeyboard.getOptionMenu(menuLogical);
-                switch (optionLogic) {
-                    case 0:
-                        System.out.println("Program ended.");
-                        return false;
-                    case 1:
-                        System.out.println("The bigger number is " + logic.checkBiggerNumber() + ".");
-                        System.out.println();
-                        break;
-                    case 2:
-                        System.out.println(logic.compareStrings());
-                        System.out.println();
-                        break;
-                    case 3:
-                        System.out.println(logic.weatherForecast());
-                        System.out.println();
-                        break;
-                    case 4:
-                        System.out.println(logic.checkNumber());
-                        System.out.println();
-                        break;
-                    case 5:
-                        logic.pressedKeyWithoutConcatenation();
-                        System.out.println();
-                        break;
-                    case 6:
-                        System.out.println("The number even? " + logic.isNumberEven());
-                        System.out.println();
-                        break;
-                    case 7:
-                        System.out.println("The eligible to vote? " + logic.isEligibleToVote());
-                        System.out.println();
-                        break;
-                    case 8:
-                        System.out.println("The max number is: " + logic.checkMaxNumber());
-                        System.out.println();
-                        break;
-                    default:
-                        System.out.println("Your options are:");
-                        displayMenu(menuLogical);
-                }
+                boolean isLogical;
+                do {
+                    isLogical = executeLogicSubmenu(menuLogical);
+                } while (isLogical);
                 break;
+        }
+        return true;
+    }
+
+    public boolean executeCalculatorSubmenu(List<Menu> menuCalculator) {
+        System.out.println();
+        System.out.println("*** Calculator submenu ***");
+        displayMenu(menuCalculator);
+        int option = readKeyboard.getOptionMenu(menuCalculator);
+//        for (var i = 0; i < menuCalculator.size(); i++) {
+//                if (menuCalculator.get(i).id == option) {
+//                    System.out.println(menuCalculator.get(i).methodName);
+//                }
+//            }
+        switch (option) {
+            case 0:
+                System.out.println("Return to main menu.");
+                return false;
+            case 1:
+                System.out.println("The sum of the two numbers is " + calculus.sumTwoNumbers() + ".");
+                System.out.println();
+                break;
+            case 2:
+                System.out.println("The sum for the four numbers is " + calculus.sumFourNumbers() + ".");
+                System.out.println();
+                break;
+            case 3:
+                System.out.println("The subtraction's result is " + calculus.subtract() + ".");
+                System.out.println();
+                break;
+            case 4:
+                System.out.println("The multiplication's result is " + calculus.multiply() + ".");
+                System.out.println();
+                break;
+            case 5:
+                System.out.println("The division's result is " + calculus.divide() + ".");
+                System.out.println();
+                break;
+            case 6:
+                System.out.println("The reminder is " + calculus.modulo() + ".");
+                System.out.println();
+                break;
+            default:
+                System.out.println("Your options are:");
+                displayMenu(menuCalculator);
+        }
+        return true;
+    }
+
+    public boolean executeLogicSubmenu(List<Menu> menuLogical) {
+        System.out.println();
+        System.out.println("*** Logic submenu ***");
+        displayMenu(menuLogical);
+        int optionLogic = readKeyboard.getOptionMenu(menuLogical);
+        switch (optionLogic) {
+            case 0:
+                System.out.println("Return to main menu.");
+                return false;
+            case 1:
+                System.out.println("The bigger number is " + logic.checkBiggerNumber() + ".");
+                System.out.println();
+                break;
+            case 2:
+                System.out.println(logic.compareStrings());
+                System.out.println();
+                break;
+            case 3:
+                System.out.println(logic.weatherForecast());
+                System.out.println();
+                break;
+            case 4:
+                System.out.println(logic.checkNumber());
+                System.out.println();
+                break;
+            case 5:
+                logic.pressedKeyWithoutConcatenation();
+                System.out.println();
+                break;
+            case 6:
+                System.out.println("Is the number even? " + logic.isNumberEven());
+                System.out.println();
+                break;
+            case 7:
+                System.out.println("Is eligible to vote? " + logic.isEligibleToVote());
+                System.out.println();
+                break;
+            case 8:
+                System.out.println("The max number is: " + logic.checkMaxNumber());
+                System.out.println();
+                break;
+            default:
+                System.out.println("Your options are:");
+                displayMenu(menuLogical);
         }
         return true;
     }
 
     public List<Menu> createCalculatorMenuList() {
         List<Menu> menu = new ArrayList<Menu>();
-        menu.add(new Menu(0, "Exit", ""));
+        menu.add(new Menu(0, "Return to main menu", ""));
         menu.add(new Menu(1, "Add two numbers", "sumTwoNumbers"));
         menu.add(new Menu(2, "Add four numbers", "sumFourNumbers"));
         menu.add(new Menu(3, "Subtract two numbers", "subtract"));
@@ -136,7 +161,7 @@ public class Program {
 
     public List<Menu> createLogicMenuList() {
         List<Menu> menu = new ArrayList<Menu>();
-        menu.add(new Menu(0, "Exit"));
+        menu.add(new Menu(0, "Return to main menu"));
         menu.add(new Menu(1, "Find the bigger number", "checkBiggerNumber"));
         menu.add(new Menu(2, "Compare string with 'FastTrackIT'", "compareStrings"));
         menu.add(new Menu(3, "What's the weather", "weatherForecast"));
@@ -144,7 +169,7 @@ public class Program {
         menu.add(new Menu(5, "Press a number", "pressedKeyWithoutConcatenation"));
         menu.add(new Menu(6, "Check for even values", "isNumberEven"));
         menu.add(new Menu(7, "Check vote eligibility", "isEligibleToVote"));
-        menu.add(new Menu(6, "Find max value", "checkMaxNumber"));
+        menu.add(new Menu(8, "Find max value", "checkMaxNumber"));
 
         return menu;
     }

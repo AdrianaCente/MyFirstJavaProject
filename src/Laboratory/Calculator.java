@@ -35,7 +35,7 @@ public class Calculator {
     public double divide() {
         double firstNum = readKeyboard.getDouble();
         double secondNum = readKeyboard.getDouble();
-        double result = firstNum * secondNum;
+        double result = firstNum / secondNum;
         return result;
     }
 

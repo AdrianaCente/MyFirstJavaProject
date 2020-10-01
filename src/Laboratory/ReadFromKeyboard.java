@@ -144,6 +144,7 @@ public class ReadFromKeyboard {
                 returnedValue = scanValue.nextInt();
                 if (returnedValue >= menu.size()) {
                     System.out.printf("Index is out of range. Please enter a number lower than %d.", menu.size());
+                    System.out.println();
                     continue;
                 }
                 repeat = false;
